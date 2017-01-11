@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float speed = 10.0f;
+    public GameObject attachedCamera;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour {
         var bullet = (GameObject)Instantiate(
             bulletPrefab,
             bulletSpawn.position,
-            bulletSpawn.rotation);
+            attachedCamera.transform.rotation);
 
         // Add velocity to the bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 60;
