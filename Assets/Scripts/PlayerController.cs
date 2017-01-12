@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             Fire();
         }
